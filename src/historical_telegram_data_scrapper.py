@@ -26,8 +26,9 @@ async def scrape_channel(client,channel_username,writer,media_dir):
         #write a row for this data
         writer.writerow([channel_title,channel_username,message.id,message.message,message.date,media_path])
 
+
 # create client
-session_store = os.path.join('data','historical_data_session') 
+session_store = os.path.join('data','sessions','historical_data_session') 
 client = TelegramClient(session_store,api_id,api_hash)
 
 async def main():
