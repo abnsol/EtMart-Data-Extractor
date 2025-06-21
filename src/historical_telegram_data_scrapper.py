@@ -14,7 +14,7 @@ async def scrape_channel(client,channel_username,writer,media_dir):
     channel_title = entity.title
 
     #iterate over the messages
-    async for message in client.iter_messages(entity,limit=10000):
+    async for message in client.iter_messages(entity,limit=1000):
         media_path = None
         # download media
         if message.media and hasattr(message.media,'photo'):
@@ -46,7 +46,7 @@ async def main():
         writer.writerow(['Title', 'Username', 'Id', 'Message', 'Date', 'Media path'])
         
         # list of curated 5 channels
-        channels = ['@Shegeronlinestore']
+        channels = ['@ethio_brand_collection','@Shegeronlinestore','@Leyueqa','@sinayelj','@modernshoppingcenter','@qnashcom','@MerttEka','@marakibrand']
 
         for channel in channels:
             await scrape_channel(client, channel , writer, media_dir)
