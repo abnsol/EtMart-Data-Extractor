@@ -18,8 +18,8 @@ The project is structured into distinct tasks, each contributing to the overall 
     * Separation and storage of metadata (sender, timestamp) from message content.
 
 2.  **Dataset Labeling for NER (CoNLL Format):**
-    * Manual labeling of a subset of preprocessed Amharic messages (currently **38 samples**) in the standardized CoNLL format.
-    * Entities include: `Product`, `Price`, `Location`, `CONTACT_INFO`, and `DELIVERY_FEE`.
+    * Manual labeling of a subset of preprocessed Amharic messages (currently **2500 samples**) in the standardized CoNLL format.
+    * Entities include: `Product`, `Price`, `Location`.
     * Interactive Python script for context-aware, token-by-token labeling.
 
 3.  **Fine-Tuning an NER Model (PEFT/LoRA):**
